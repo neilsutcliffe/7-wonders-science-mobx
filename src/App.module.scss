@@ -1,0 +1,13 @@
+.piles
+{
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.piles li
+{
+    width: 32%;
+    background: salmon;
+}
