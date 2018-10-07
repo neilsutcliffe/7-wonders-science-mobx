@@ -1,4 +1,4 @@
-import { observable, action, reaction } from 'mobx';
+import { observable, action, computed } from 'mobx';
 
 class BoardStore {
 
@@ -15,6 +15,18 @@ class BoardStore {
     this.sciences.push({ symbol: "compass", count: 0});
     this.sciences.push({ symbol: "gear", count: 0});
   }
+
+  @computed get total() {
+    var sciences = this.sciences;
+
+    console.log(sciences);
+    var squared = sciences.reduce((a,b) => a.count * a.count, 0);
+    console.log(squared);
+    var sets = Math.min(sciences.map(a => a.count)) * 7;
+    console.log(sets);
+    var total = squared = sets;
+    return total;
+  }  
 
   @action addTech = (clicked) => {
     var match = this.sciences.find((science) => { return science.symbol === clicked.symbol });

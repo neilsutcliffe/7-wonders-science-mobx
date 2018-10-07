@@ -6,6 +6,7 @@
     "custom-react-scripts": "0.2.2",
     "mobx": "^5.5.0",
     "mobx-react": "^5.2.8",
+    "normalize.css": "^8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },

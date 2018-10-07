@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
-import './App.scss';
 import styles from './App.module.scss';
-import cardStyles from './App.module.scss';
+import cardStyles from './Card.module.scss';
+import Score from './Score'
 
 
 @inject('boardStore')
@@ -13,10 +13,10 @@ class App extends Component {
     const { boardStore } = this.props;
 
     return (
-      <div className="App">
-        <div className="cssStyles.header">
+      <div className={styles.app}>
+        <header className={styles.header}>
           <h2>{ boardStore.appName }</h2>
-        </div>
+        </header>
 
         <div className="styles.description">
           <ul className={styles.piles}>
@@ -29,6 +29,7 @@ class App extends Component {
               })
             }
           </ul>
+          <Score total={boardStore.total}/>
         </div>
       </div>
     );
@@ -43,8 +44,8 @@ const SciencePile = props => (
   <li>
     { props.count }
     <button onClick={props.decrement}>-</button>
-    <CardStack count={props.count} />
     <button onClick={props.increment}>+</button>
+    <CardStack count={props.count} />
   </li>
 );
 
@@ -60,7 +61,7 @@ const CardStack = ({ count }) => {
 
 
 const Card = ({ count }) => {
-  return <div className={cardStyles.card}>{ count } </div>
+  return <div className={cardStyles.card}><div className={cardStyles.cardInner}>{ count }</div></div>
 }
 
 export default App;

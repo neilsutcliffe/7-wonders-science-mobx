@@ -1,6 +1,18 @@
-.Card
+.card
 {
 	border-radius: 5px;
 	border: 1px solid black;
-	height: 120px;
+	padding-bottom: 154%;
+	background-color: #FAFAFA;
+	font-size: 24px;
+	text-align: center;
+}
+
+.card + .card
+{
+	margin-top: -135%;
+}
+
+.cardinner
+{
 }

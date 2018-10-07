@@ -4,6 +4,8 @@ import { Provider } from 'mobx-react';
 import boardStore from './stores/boardStore';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import 'normalize.css'; 
+
 
 const stores = {
 	boardStore
