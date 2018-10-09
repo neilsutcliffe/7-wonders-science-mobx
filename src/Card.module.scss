@@ -1,18 +1,67 @@
-.card
+.card, .placeHolder
 {
-	border-radius: 5px;
-	border: 1px solid black;
+	border-radius: 8px;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
 	padding-bottom: 154%;
 	background-color: #FAFAFA;
 	font-size: 24px;
 	text-align: center;
+	position: relative;
+	overflow: hidden;
 }
 
 .card + .card
 {
-	margin-top: -135%;
+	margin-top: -125%;
 }
 
-.cardinner
+
+.card
 {
+	background-color: #333;
+}
+
+.placeHolder
+{
+	border: 1px dashed #999;
+	opacity: 0.5;
+	box-shadow: none;
+}
+
+.cardInner
+{
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	left: 5%;
+	bottom: 3%;
+	border-radius: 5px;
+}
+
+.cardInner
+{
+	background: #15722b;
+}
+
+.cardInner::before
+{
+	top: 20%;
+	left: 18%;
+	bottom: 0;
+	right: 0;
+	content: "";
+	position: absolute;
+	background-color: white;
+}
+
+.cardInner::after {
+	top: 3%;
+	left: 0;
+	right: 0;
+	height: 13%;
+	width: 20%;
+	margin: auto;
+	content: "";
+	position: absolute;
+	background-color: white;
 }

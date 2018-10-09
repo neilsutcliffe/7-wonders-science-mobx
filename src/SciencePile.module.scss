@@ -1,0 +1,31 @@
+.controls
+{
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.controls > *
+{
+    width: 33%;
+    border: none;
+    font-size: 6vw;
+}
+
+.controls button
+{
+    border-radius: 5px;
+    background-color: #DADADA;
+}
+
+
+@media (min-width: 768px) {
+    .controls > *
+    {
+        font-size: 32px;
+    }
+}
+
