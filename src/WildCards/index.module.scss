@@ -1,0 +1,62 @@
+.wildCardContainer
+{
+    background-color: #333;
+    border-top: 1px solid black;
+    color: white;
+    text-align: center;
+    
+    .inputCheckbox
+    {
+        padding: 1em;
+
+        label + label
+        {
+            margin-left: 20px;
+        }
+        
+        label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 10px;
+            font-size: 80%;
+            user-select: none;
+
+
+            input[type="checkbox"] 
+            {
+                display: none;
+            }
+
+            &:before
+            {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                border-radius: 3px;
+                background-color: #FAFAFA;
+            }
+    
+            &[data-checked='checked']
+            {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: inline-block;
+                    color: #333;
+                    background-color: #ffb804;
+                    height: 12px;
+                    width: 12px;
+                    left: 2px;
+                    top: 2px;
+                    border-radius: 3px;
+                }
+                
+            }
+        }
+
+    }
+}

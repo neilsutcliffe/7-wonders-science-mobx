@@ -1,0 +1,74 @@
+.controls
+{
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.controls > *
+{
+    width: 33%;
+    border: none;
+    font-size: calc(12vw / 3);
+}
+
+.controls button
+{
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+
+.WildCardToken
+{
+    display: block;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: -30px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    li
+    {
+        position: relative;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        margin: 4px;
+        margin-bottom: -20px;
+        border-radius: 50%;
+        color: white;
+        background-color: #cc4900;
+        border: 2px solid rgb(58, 26, 0);;
+	    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.3);
+
+
+        &::after
+        {
+            position: absolute;
+            content: "+1";
+            text-align: center;
+            font: bold 20px Arial;
+            white-space: pre;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+            text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .controls > *
+    {
+        font-size: 32px;
+    }
+}
+

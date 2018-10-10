@@ -51,17 +51,15 @@
 	right: 0;
 	content: "";
 	position: absolute;
-	background-color: white;
+	background-color:#031f06;
 }
 
-.cardInner::after {
-	top: 3%;
+.symbol {
+	top: 2%;
 	left: 0;
 	right: 0;
-	height: 13%;
-	width: 20%;
+	height: 15%;
 	margin: auto;
 	content: "";
 	position: absolute;
-	background-color: white;
 }

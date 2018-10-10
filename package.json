@@ -2,6 +2,7 @@
   "name": "mobx-7wonders",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://neilsutcliffe.com/7wonders",
   "dependencies": {
     "custom-react-scripts": "0.2.2",
     "mobx": "^5.5.0",

@@ -14,16 +14,15 @@
     background:#15722b;
     margin: 0;
     padding: 0.5em;
-    font-size: 24px;
+    font-size: 16px;
     color: white;
     text-align: center;
     font-weight: 300;
-    border-bottom: 6px solid orange;
-	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.6);
+    border-bottom: 6px solid #333;
 
 }
 
-.header h2
+.header h1
 {
     font-weight: 300;
     max-width: 75%;
@@ -38,9 +37,17 @@
     list-style: none;
 }
 
-.piles li
+.piles > li
 {
     width: 32%;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
